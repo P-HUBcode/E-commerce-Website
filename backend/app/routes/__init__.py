@@ -1,6 +1,6 @@
 import os
 from flask import Flask
-from .extensions import db, migrate
+from app.extension import db, migrate
 import cloudinary
 
 def create_app():
@@ -19,7 +19,7 @@ def create_app():
         api_secret=os.getenv('CLOUD_API_SECRET')
     )
 
-    from .routes.upload import upload_bp
+    from app.routes.upload import upload_bp
     app.register_blueprint(upload_bp)
 
     return app

@@ -141,7 +141,7 @@
 
   a {
     color: inherit;
-    -webkit-text-decoration: inherit;
+    -webkit-text-decoration: underline;
     -webkit-text-decoration: inherit;
     text-decoration: inherit;
   }
@@ -200,7 +200,7 @@
 
   img, svg, video, canvas, audio, iframe, embed, object {
     vertical-align: middle;
-    display: block;
+    display: flex;
   }
 
   img, video {
@@ -599,6 +599,7 @@
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     display: -webkit-box;
+    line-clamp: 1;
     overflow: hidden;
   }
 
@@ -606,6 +607,7 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     display: -webkit-box;
+    line-clamp: 2;
     overflow: hidden;
   }
 
@@ -894,13 +896,14 @@
     border-radius: var(--radius);
   }
 
-  .rounded-md {
-    border-radius: calc(var(--radius)  - 2px);
-  }
+.rounded-md {
+  border-radius: calc(var(--radius) - 2px);
+}
 
-  .rounded-xl {
-    border-radius: calc(var(--radius)  + 4px);
-  }
+.rounded-xl {
+  border-radius: calc(var(--radius) + 4px);
+}
+
 
   .rounded-xs {
     border-radius: var(--radius-xs);

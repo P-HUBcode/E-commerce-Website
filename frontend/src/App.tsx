@@ -5,8 +5,8 @@ import { Cart } from "./components/Cart";
 import { ProductDetailsDialog } from "./components/ProductDetailsDialog";
 import { Filters } from "./components/Filters";
 import { Product, CartItem } from "./types";
-import { toast } from "sonner@2.0.3";
-import { Toaster } from "./components/ui/sonner";
+import { toast, Toaster } from "sonner";
+
 
 const PRODUCTS: Product[] = [
   {

@@ -1,4 +1,5 @@
 # app/routes/webhooks.py
+import os
 import stripe
 from flask import Blueprint, request, jsonify, current_app
 
@@ -15,6 +16,6 @@ def stripe_webhook():
         return jsonify({'msg': str(e)}), 400
 
     if event['type'] == 'checkout.session.completed':
-        session = event['data']['object']
+        session = event['data']['object'] # noqa: S1481
         # xử lý tạo order, mark paid, gửi email, etc.
     return jsonify({'received': True})
